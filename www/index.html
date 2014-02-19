@@ -31,85 +31,88 @@
 </head>
 
 <body>
-    <section id="page-main" data-role="page">
-      <header id="header-mylist" data-role="header" data-position="fixed">
-          <h1>6th Grade Math</h1>
-      </header>
+  <section id="page-main" data-role="page">
+    <header id="header-mylist" data-role="header" data-position="fixed">
+      <h1>6th Grade Math</h1>
+    </header>
       <!-- /header -->
-      <article data-role="content" id="contentlist">
-        <ul data-role="listview" id="standardslist" class="coreStandards" data-filter="true">
-          <li>
-            <a href="#page-add">
-              <h3>First Standard</h3>
-            </a>
-          </li>
-            </ul>
+    <article data-role="content" id="contentlist">
+      <ul data-role="listview" id="standardslist" class="coreStandards" data-filter="true">
+        <li>
+          <a href="#page-add">
+            <h3>First Standard</h3>
+          </a>
+        </li>
+      </ul>
+    </article>
+        <!-- /content -->
+    <footer data-role="footer" data-position="fixed" id="app-nav">
+      <div data-role="navbar" data-iconpos="top" data-theme="c">
+        <h3 class="aligncenter">My Standards: 90%</h3>
+      </div>
+    </footer>
+        <!-- /footer -->
+  </section>
+
+  <section id="page-add" data-role="page" data-add-back-btn="true">
+    <header data-role="header" data-theme="a">
+      <h1>Add Item</h1>
+    </header>
+    <!-- /header -->
+    <article data-role="content">
+      <form action="" id="form-add-item" class="" style="">
+        <label for="form-title">What's on your Bucket List?</label>
+        <input id="form-title" type="text" placeholder="I am going to..." />
+        <label for="form-desc">More Info:</label>
+        <textarea name="" id="form-desc" placeholder="Add any additional information here..."></textarea>
+        <input id="form-uuid" type="hidden" />
+        <input id="form-completedby" type="hidden" />
+        <a id="btn-cancel" data-role="button" data-icon="delete" href="#page-main">Cancel</a>
+        <a id="btn-submit" data-role="button" data-icon="plus">Submit</a>
+        <a id="btn-did-it" class="hideaway" data-role="button" data-icon="check" href="#page-main">I did it!</a>
+        <a id="btn-forget-it" class="hideaway" data-role="button" data-icon="trash" href="#page-main">Forget it!</a>
+      </form>
+    </article>
+        <!-- /content -->
+    </section>
+
+    <section id="page-newuser" data-role="page">
+      <header data-role="header" data-theme="a">
+        <h1>New User</h1>
+      </header>
+        <!-- /header -->
+      <article data-role="content">
+        <form action="" id="form-add-user" class="" style="">
+            <label for="form-new-username">Username:</label>
+            <input id="form-new-username" type="text" placeholder="Choose a username..." />
+            <label for="form-new-password">Password:</label>
+            <textarea name="" id="form-new-password" placeholder="Choose a password"></textarea>
+            <a id="btn-clear" data-role="button" data-icon="delete">Clear</a>
+            <a id="btn-submit" data-role="button" data-icon="plus">Submit</a>
+        </form>
       </article>
         <!-- /content -->
-      <footer data-role="footer" data-position="fixed" id="app-nav">
-        <div data-role="navbar" data-iconpos="top" data-theme="c">
-          <h3 class="aligncenter">My Standards: 90%</h3>
-        </div>
-        </footer>
-        <!-- /footer -->
-    </section>
-    <section id="page-add" data-role="page" data-add-back-btn="true">
-        <header data-role="header" data-theme="a">
-            <h1>Add Item</h1>
-        </header>
-        <!-- /header -->
-        <article data-role="content">
-            <form action="" id="form-add-item" class="" style="">
-                <label for="form-title">What's on your Bucket List?</label>
-                <input id="form-title" type="text" placeholder="I am going to..." />
-                <label for="form-desc">More Info:</label>
-                <textarea name="" id="form-desc" placeholder="Add any additional information here..."></textarea>
-                <input id="form-uuid" type="hidden" />
-                <input id="form-completedby" type="hidden" />
-                <a id="btn-cancel" data-role="button" data-icon="delete" href="#page-main">Cancel</a>
-                <a id="btn-submit" data-role="button" data-icon="plus">Submit</a>
-                <a id="btn-did-it" class="hideaway" data-role="button" data-icon="check" href="#page-main">I did it!</a>
-                <a id="btn-forget-it" class="hideaway" data-role="button" data-icon="trash" href="#page-main">Forget it!</a>
-            </form>
-        </article>
-        <!-- /content -->
-    </section>
-    <section id="page-newuser" data-role="page">
-        <header data-role="header" data-theme="a">
-            <h1>New User</h1>
-        </header>
-        <!-- /header -->
-        <article data-role="content">
-            <form action="" id="form-add-user" class="" style="">
-                <label for="form-new-username">Username:</label>
-                <input id="form-new-username" type="text" placeholder="Choose a username..." />
-                <label for="form-new-password">Password:</label>
-                <textarea name="" id="form-new-password" placeholder="Choose a password"></textarea>
-                <a id="btn-clear" data-role="button" data-icon="delete">Clear</a>
-                <a id="btn-submit" data-role="button" data-icon="plus">Submit</a>
-            </form>
-        </article>
-        <!-- /content -->
-    </section>
-    <section id="page-login" data-role="page">
-        <header data-role="header" data-theme="a">
-            <h1>Login</h1>
-        </header>
-        <!-- /header -->
-        <article data-role="content">
-            <form action="" id="form-login-user" class="" style="">
-                <label for="form-username">Username:</label>
-                <input id="form-username" type="text" placeholder="Enter your username..." />
-                <label for="form-password">Password:</label>
-                <textarea name="" id="form-password" placeholder="Enter your password..."></textarea>
-                <a id="btn-clear" data-role="button" data-icon="delete">Clear</a>
-                <a id="btn-submit" data-role="button" data-icon="plus">Submit</a>
-                <a id="btn-newuser" data-role="button" data-icon="user" href="#page-newuser">Create an Account</a>
-            </form>
-            <p id="login-section-error"></p>
-        </article>
-        <!-- /content -->
-    </section>
+  </section>
+
+  <section id="page-login" data-role="page">
+    <header data-role="header" data-theme="a">
+        <h1>Login</h1>
+    </header>
+    <!-- /header -->
+    <article data-role="content">
+        <form action="" id="form-login-user" class="" style="">
+            <label for="form-username">Username:</label>
+            <input id="form-username" type="text" placeholder="Enter your username..." />
+            <label for="form-password">Password:</label>
+            <textarea name="" id="form-password" placeholder="Enter your password..."></textarea>
+            <a id="btn-clear" data-role="button" data-icon="delete">Clear</a>
+            <a id="btn-submit" data-role="button" data-icon="plus">Submit</a>
+            <a id="btn-newuser" data-role="button" data-icon="user" href="#page-newuser">Create an Account</a>
+        </form>
+        <p id="login-section-error"></p>
+    </article>
+      <!-- /content -->
+  </section>
 </body>
 
 </html>
