@@ -44,13 +44,13 @@ footer {
     position: relative;
     cursor: pointer;
 }
-#bucketlist.mybucketlist li {
+#standardslist.coreStandards li {
     padding-left: 25px;
 }
-#bucketlist li, #inspirelist li {
+#standardslist li, #inspirelist li {
     border-bottom: 1px solid #eee;
 }
-#bucketlist.mybucketlist li:before {
+#standardslist.coreStandards li:before {
     /*content:"\f096";*/
     content: "";
     font-family: FontAwesome;
@@ -63,7 +63,7 @@ footer {
     width: 24px;
     height: 100%;
 }
-#bucketlist.mybucketlist li.done:before {
+#standardslist.coreStandards li.done:before {
     content:"\f046";
 }
 #inspirelist li:after {
@@ -1275,5 +1275,9 @@ input.ui-input-text, textarea.ui-input-text {
     content:"\f02a";
     opacity: 0.2;
     font-size: 26px;
+    text-align: center;
+}
+
+.aligncenter {
     text-align: center;
 }
