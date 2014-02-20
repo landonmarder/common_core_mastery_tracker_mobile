@@ -44,13 +44,13 @@ footer {
     position: relative;
     cursor: pointer;
 }
-#standardslist.coreStandards li {
+#list-of-standards.coreStandards li {
     padding-left: 25px;
 }
-#standardslist li, #inspirelist li {
+#list-of-standards li, #inspirelist li {
     border-bottom: 1px solid #eee;
 }
-#standardslist.coreStandards li:before {
+#list-of-standards.coreStandards li:before {
     /*content:"\f096";*/
     content: "";
     font-family: FontAwesome;
@@ -63,7 +63,7 @@ footer {
     width: 24px;
     height: 100%;
 }
-#standardslist.coreStandards li.done:before {
+#list-of-standards.coreStandards li.done:before {
     content:"\f046";
 }
 #inspirelist li:after {
