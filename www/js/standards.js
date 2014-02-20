@@ -45,11 +45,11 @@ var url = 'http://www.AccessToCommonCore.com/api/math/6';
   }
 
   function formatStandard(standard) {
-    return ('<li>'+standard.standard+'</li>');
+    return ('<li class="objective">'+standard.standard+'</li>');
   }
 
   function formatStandardDetail(standardDetail) {
-    return ('<li>'+standardDetail.standard+'</li>');
+    return ('<li class="objective">'+standardDetail.standard+'</li>');
   }
 
   function formatBeginList() {

@@ -91,4 +91,8 @@ $(function(){
       }
     );
   }
+
+  $('body').on('click', '.objective', function() {
+    alert(this.textContent);
+  });
 });
