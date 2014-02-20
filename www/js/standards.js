@@ -44,20 +44,12 @@ var url = 'http://www.AccessToCommonCore.com/api/math/6';
     $(content).appendTo("#list-of-standards");
   }
 
-  // function formatDomainOrStrand(domain) {
-  //   // return ('<li>'+domain.standard+'</li>');
-  // }
-
-  // function formatCluster(cluster) {
-  //   // return ('<li>'+cluster.standard+'</li>');
-  // }
-
   function formatStandard(standard) {
-    return ('<li><a>'+ standard.standard_code+'</a> '+standard.standard+'</li>');
+    return ('<li>'+standard.standard+'</li>');
   }
 
   function formatStandardDetail(standardDetail) {
-    return ('<li><a>'+ standardDetail.standard_code+'</a> '+standardDetail.standard+'</li>');
+    return ('<li>'+standardDetail.standard+'</li>');
   }
 
   function formatBeginList() {
