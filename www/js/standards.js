@@ -20,11 +20,9 @@ var url = 'http://www.AccessToCommonCore.com/api/math/6';
     var content = '';
 
     $.each(commonCore, function (j, domainORstrand) {
-      content += formatDomainOrStrand(domainORstrand);
 
       if (domainORstrand.hasOwnProperty('children')) {
         $.each(domainORstrand.children, function (k, cluster) {
-          content += formatCluster(cluster);
 
         if (cluster.hasOwnProperty('children')) {
           content += formatBeginList();
@@ -48,13 +46,13 @@ var url = 'http://www.AccessToCommonCore.com/api/math/6';
     $(content).appendTo("#list-of-standards");
   }
 
-  function formatDomainOrStrand(domain) {
-    return ('<h3>'+domain.standard+'</h3>');
-  }
+  // function formatDomainOrStrand(domain) {
+  //   // return ('<li>'+domain.standard+'</li>');
+  // }
 
-  function formatCluster(cluster) {
-    return ('<h4>'+cluster.standard+'</h4>');
-  }
+  // function formatCluster(cluster) {
+  //   // return ('<li>'+cluster.standard+'</li>');
+  // }
 
   function formatStandard(standard) {
     return ('<li><a>'+ standard.standard_code+'</a> '+standard.standard+'</li>');
@@ -73,6 +71,5 @@ var url = 'http://www.AccessToCommonCore.com/api/math/6';
   }
 
   function formatDisplayHeaders(firstStandard) {
-    var content = '<h3><p>' + firstStandard.standard + '</p><h3>';
-    $(content).appendTo("#curriculum-grade-header");
+    // var content = '<h3><p>' + firstStandard.standard + '</p><h3>';
   }
