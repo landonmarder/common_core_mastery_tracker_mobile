@@ -92,7 +92,7 @@ $(function(){
     );
   }
 
-  $('body').on('click', '.objective', function() {
+  $('body').on('swipe', '.objective', function() {
     var standard = this.textContent;
     prompt("What is your mastery for: "+ standard);
   });
