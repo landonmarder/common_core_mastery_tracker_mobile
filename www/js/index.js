@@ -94,6 +94,6 @@ $(function(){
 
   $('body').on('click', '.objective', function() {
     var standard = this.textContent;
-    alert(standard);
+    prompt("What is your mastery for: "+ standard);
   });
 });
