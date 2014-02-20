@@ -1185,7 +1185,7 @@ input.ui-input-text, textarea.ui-input-text {
 .ui-icon-ok:after, .ui-icon-check:after {
     content:"\f00c";
 }
-.ui-icon-remove:after, .ui-icon-delete:after {
+.ui-icon-remove:after {
     content:"\f00d";
 }
 .ui-icon-power-off:after, .ui-icon-off:after, .ui-icon-off:after {
