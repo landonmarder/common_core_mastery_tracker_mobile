@@ -16,7 +16,6 @@ var url = 'http://www.AccessToCommonCore.com/api/math/6';
 
   function makeCommonCoreList(response) {
     var commonCore = response.data.common_core.children;
-    formatDisplayHeaders(response.data.common_core);
     var content = '';
 
     $.each(commonCore, function (j, domainORstrand) {
@@ -58,8 +57,4 @@ var url = 'http://www.AccessToCommonCore.com/api/math/6';
 
   function formatEndList() {
     return ('</ul>');
-  }
-
-  function formatDisplayHeaders(firstStandard) {
-    // var content = '<h3><p>' + firstStandard.standard + '</p><h3>';
   }
