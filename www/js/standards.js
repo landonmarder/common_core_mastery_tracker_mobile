@@ -25,12 +25,10 @@ var url = 'http://www.AccessToCommonCore.com/api/math/6';
         $.each(domainORstrand.children, function (k, cluster) {
 
         if (cluster.hasOwnProperty('children')) {
-          content += formatBeginList();
           $.each(cluster.children, function (l, standard) {
             content += formatStandard(standard);
 
             if (standard.hasOwnProperty('children')) {
-                content += formatBeginList();
                 $.each(standard.children, function (m, standardDetail) {
                     content += formatStandardDetail(standardDetail)
                 });
