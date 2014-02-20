@@ -93,6 +93,7 @@ $(function(){
   }
 
   $('body').on('click', '.objective', function() {
-    alert(this.textContent);
+    var standard = this.textContent;
+    alert(standard);
   });
 });
