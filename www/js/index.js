@@ -108,23 +108,16 @@ $(function(){
       if (err) {
         alert('error');
       } else {
-        console.log('success');
+        $('#btn-load-completed').trigger('click');
       }
     });
   });
 
   $('body').on('click', '#btn-load-completed', function(){
-    // var completedStandards = new Apigee.Collection({
-    //   "client": client,
-    //   "type": "standards",
-    //   "qs": { "ql": ("where userID=" + appUser._data.uuid) }
-    // });
-    // debugger;
-
     var options = {
       "method": "GET",
       "endpoint": "standards",
-      "qs": {"ql": ("where userID=" + appUser._data.uuid) }
+      "qs": {"ql": ("where userID=" + appUser._data.uuid) + "order by created desc" }
     };
 
     client.request(options, function (err, data) {
@@ -136,13 +129,16 @@ $(function(){
         var items = data.entities;
         $.each(items, function(j, object){
           totalScore = totalScore + object.result;
+          content = (content + '<li class="objective">'+object.result+'%: '+object.standard+'</li>');
         });
+
+        $('#list-of-completed-standards').empty();
+        $(content).appendTo('#list-of-completed-standards');
+
         var average = (totalScore / items.length).toFixed(2);
         $("#average").empty();
         $("#average").append('My Standards: '+ average + '%');
       }
     })
   });
-
-
 });
