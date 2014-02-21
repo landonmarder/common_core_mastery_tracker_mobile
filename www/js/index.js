@@ -94,7 +94,9 @@ $(function(){
     var standard = this.textContent;
     var result = parseFloat(prompt("What is your mastery for: "+ standard));
     var userId = appUser._data.uuid;
-    // validate here
+    if (isNaN(result)) {
+      return alert("Sorry, you need to enter a number");
+    }
 
     var newItem = {
       'standard': standard,
