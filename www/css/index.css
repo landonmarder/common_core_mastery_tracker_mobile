@@ -24,18 +24,18 @@ article {
 }
 header, footer {
     background-color: #FFF;
-    border-bottom: 1px solid rgb(255, 67, 0);
-    color: rgb(255, 67, 0);
+    border-bottom: 1px solid #0F9699;
+    color #0F9699;
 }
 footer {
-    border-top: 1px solid rgb(255, 67, 0);
+    border-top: 1px solid #0F9699;
     border-bottom: none;
 }
 .ui-li, .ui-li.ui-field-contain {
     border-bottom: 1px solid #eee;
 }
 .ui-block-b {
-    border-left: 1px solid rgb(255, 67, 0);
+    border-left: 1px solid #0F9699
 }
 .ui-footer .ui-navbar li .ui-btn {
     margin-top: 4px;
@@ -55,7 +55,7 @@ footer {
     content: "";
     font-family: FontAwesome;
     font-size: 24px;
-    color: rgb(255, 67, 0);
+    color: #0F9699;
     position: absolute;
     left: 10px;
     top: 50%;
@@ -70,7 +70,7 @@ footer {
     content:"\f116";
     font-family: FontAwesome;
     font-size: 24px;
-    color: rgb(255, 67, 0);
+    color: #0F9699;
     position: absolute;
     right: 0;
     top: 50%;
@@ -85,7 +85,7 @@ footer {
 }
 
 #btn-cancel, #btn-submit, #btn-clear, #btn-newuser, #btn-did-it, #btn-forget-it, #btn-login-cancel, #btn-login-submit, #btn-login-newuser {
-    border: 1px solid rgb(255, 67, 0);
+    border: 1px solid #0F9699;
     margin: 2px auto;
     width: 100%;
     -webkit-box-sizing: border-box;
@@ -114,7 +114,7 @@ footer {
     -webkit-overflow-scrolling: touch;
 }
 .ui-icon {
-    color: rgb(255, 67, 0);
+    color: #0F9699;
     font-size: 24px;
 }
 .ui-btn-icon-top .ui-btn-inner .ui-icon, .ui-btn-icon-bottom .ui-btn-inner .ui-icon {
@@ -1283,13 +1283,13 @@ input.ui-input-text, textarea.ui-input-text {
 }
 
 #red-score {
-    background-color: red;
+    background-color: #D24966;
 }
 
 #green-score {
-    background-color: green;
+    background-color: #14CC66;
 }
 
 #yellow-score {
-    background-color: yellow;
+    background-color: #FFFC00;
 }
