@@ -131,6 +131,13 @@ $(function(){
       if (err) {
         console.log("FAIL");
       } else {
+        var content = '';
+        var totalScore = 0;
+        var items = data.entities;
+        $.each(items, function(j, object){
+          totalScore = totalScore + object.result;
+        });
+        var average = totalScore / items.length
         debugger;
       }
     })
