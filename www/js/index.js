@@ -129,7 +129,15 @@ $(function(){
         var items = data.entities;
         $.each(items, function(j, object){
           totalScore = totalScore + object.result;
-          content = (content + '<li class="objective">'+object.result+'%: '+object.standard+'</li>');
+          var colorScore = '';
+          if (object.result >= 80) {
+            colorScore = 'green-score';
+          } else if (object.result >= 50) {
+            colorScore = 'yellow-score';
+          } else {
+            colorScore = 'red-score';
+          }
+          content = (content + '<li class="objective" id="'+colorScore+'">'+object.result+'%: '+object.standard+'</li>');
         });
 
         $('#list-of-completed-standards').empty();

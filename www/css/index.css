@@ -1281,3 +1281,15 @@ input.ui-input-text, textarea.ui-input-text {
 .aligncenter {
     text-align: center;
 }
+
+#red-score {
+    background-color: red;
+}
+
+#green-score {
+    background-color: green;
+}
+
+#yellow-score {
+    background-color: yellow;
+}
