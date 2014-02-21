@@ -15,15 +15,6 @@ $(function(){
     }
   });
 
-  var completedStandards = new Apigee.Collection({
-    "client": client,
-    "type": "standards",
-    "qs": {
-      "limit": 100,
-      "ql": "where userId={appUser._data.uuid}"
-    }
-  });
-
   client.getLoggedInUser(function(err, data, user) {
     if (err) {
       window.location = "#page-login"
@@ -99,7 +90,7 @@ $(function(){
     );
   }
 
-  $('body').on('click', '.objective', function() {
+  $('body').on('swipe', '.objective', function() {
     var standard = this.textContent;
     var result = parseFloat(prompt("What is your mastery for: "+ standard));
     var userId = appUser._data.uuid;
@@ -121,4 +112,29 @@ $(function(){
       }
     });
   });
+
+  $('body').on('click', '#btn-load-completed', function(){
+    // var completedStandards = new Apigee.Collection({
+    //   "client": client,
+    //   "type": "standards",
+    //   "qs": { "ql": ("where userID=" + appUser._data.uuid) }
+    // });
+    // debugger;
+
+    var options = {
+      "method": "GET",
+      "endpoint": "standards",
+      "qs": {"ql": ("where userID=" + appUser._data.uuid) }
+    };
+
+    client.request(options, function (err, data) {
+      if (err) {
+        console.log("FAIL");
+      } else {
+        debugger;
+      }
+    })
+  });
+
+
 });
