@@ -9,12 +9,11 @@ $(function(){
   var standards = new Apigee.Collection({
     "client": client,
     "type": "standards",
-  })
-
-  var myList = new Apigee.Collection({
-    "client": client,
-    "type": "users/me/mystandards"
-  })
+    "qs": {
+      "limit": 100,
+      "ql": "order by title"
+    }
+  });
 
   client.getLoggedInUser(function(err, data, user) {
     if (err) {
@@ -22,7 +21,6 @@ $(function(){
     } else {
       if (client.isLoggedIn()) {
         appUser = user;
-        // loadItems(myList);
       }
     }
   });
@@ -96,6 +94,21 @@ $(function(){
     var standard = this.textContent;
     var result = parseFloat(prompt("What is your mastery for: "+ standard));
     var userId = appUser._data.uuid;
-    debugger;
+    // validate here
+
+    var newItem = {
+      'standard': standard,
+      'result': result,
+      'userID': userId
+    }
+
+    standards.addEntity(newItem, function(err, res){
+      if (err) {
+        alert('error');
+      } else {
+        alert('success');
+      }
+    });
+
   });
 });
