@@ -137,7 +137,7 @@ $(function(){
 
         var average = (totalScore / items.length).toFixed(2);
         $("#average").empty();
-        $("#average").append('My Standards: '+ average + '%');
+        $("#average").append('My Mastery: '+ average + '%');
       }
     })
   });
