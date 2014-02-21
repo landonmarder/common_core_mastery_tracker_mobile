@@ -86,14 +86,16 @@ $(function(){
           $("#form-password").val('');
 
           window.location = "#page-main";
-          loadItems(myList);
+          // loadItems(myList);
         }
       }
     );
   }
 
-  $('body').on('swipe', '.objective', function() {
+  $('body').on('click', '.objective', function() {
     var standard = this.textContent;
-    prompt("What is your mastery for: "+ standard);
+    var result = parseFloat(prompt("What is your mastery for: "+ standard));
+    var userId = appUser._data.uuid;
+    debugger;
   });
 });
