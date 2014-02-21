@@ -108,7 +108,7 @@ $(function(){
       if (err) {
         alert('error');
       } else {
-        alert('success');
+        console.log('success');
       }
     });
   });
@@ -137,8 +137,9 @@ $(function(){
         $.each(items, function(j, object){
           totalScore = totalScore + object.result;
         });
-        var average = totalScore / items.length
-        debugger;
+        var average = (totalScore / items.length).toFixed(2);
+        $("#average").empty();
+        $("#average").append('My Standards: '+ average + '%');
       }
     })
   });
