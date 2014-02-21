@@ -49,12 +49,12 @@
         <h3 class="aligncenter">My Standards: 90%</h3>
         <ul>
           <li>
-          <a id="btn-load-mylist" href="#page-main" data-transition="fade" data-theme="c" data-icon="edit">
+          <a id="btn-load-standards" href="#page-main" data-transition="fade" data-theme="c" data-icon="edit">
             All Standards
           </a>
           </li>
           <li>
-          <a id="btn-load-mylist" href="#page-main" data-transition="fade" data-theme="c" data-icon="edit">
+          <a id="btn-load-completed" href="#page-completed" data-transition="fade" data-theme="c" data-icon="edit">
             Completed
           </a>
           </li>
@@ -64,26 +64,34 @@
         <!-- /footer -->
   </section>
 
-  <section id="page-add" data-role="page" data-add-back-btn="true">
-    <header data-role="header" data-theme="a">
-      <h1>Objective Mastery</h1>
+  <section id="page-completed" data-role="page">
+    <header id="header-mylist" data-role="header" data-position="fixed">
+    <a id="btn-logout" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true" href="#page-login" class="ui-btn-left" data-theme="c">Logout</a>
+      <h1>6th Grade Math</h1>
     </header>
-    <!-- /header -->
+      <!-- /header -->
     <article data-role="content">
-      <form action="" id="form-add-item" class="" style="">
-        <label for="form-title">Standard</label>
-        <input id="form-title" type="text" placeholder="I am going to..." />
-        <label for="form-desc">What did you score?</label>
-        <textarea name="" id="form-desc" placeholder="80%"></textarea>
-        <input id="form-uuid" type="hidden" />
-        <input id="form-completedby" type="hidden" />
-        <a id="btn-cancel" data-role="button" data-icon="delete" href="#page-main">Back</a>
-        <a id="btn-submit" data-role="button" data-icon="plus">Submit</a>
-        <a id="btn-did-it" class="hideaway" data-role="button" data-icon="check" href="#page-main">I did it!</a>
-        <a id="btn-forget-it" class="hideaway" data-role="button" data-icon="trash" href="#page-main">Forget it!</a>
-      </form>
+
     </article>
         <!-- /content -->
+     <footer data-role="footer" data-position="fixed" id="app-nav">
+      <div data-role="navbar" data-iconpos="top" data-theme="c">
+        <h3 class="aligncenter">My Standards: 90%</h3>
+        <ul>
+          <li>
+          <a id="btn-load-standards" href="#page-main" data-transition="fade" data-theme="c" data-icon="edit">
+            All Standards
+          </a>
+          </li>
+          <li>
+          <a id="btn-load-completed" href="#page-completed" data-transition="fade" data-theme="c" data-icon="edit">
+            Completed
+          </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+        <!-- /footer -->
     </section>
 
     <section id="page-newuser" data-role="page">

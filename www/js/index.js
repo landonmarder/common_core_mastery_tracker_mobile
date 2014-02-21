@@ -15,6 +15,15 @@ $(function(){
     }
   });
 
+  var completedStandards = new Apigee.Collection({
+    "client": client,
+    "type": "standards",
+    "qs": {
+      "limit": 100,
+      "ql": "where userId={appUser._data.uuid}"
+    }
+  });
+
   client.getLoggedInUser(function(err, data, user) {
     if (err) {
       window.location = "#page-login"
@@ -111,6 +120,5 @@ $(function(){
         alert('success');
       }
     });
-
   });
 });
